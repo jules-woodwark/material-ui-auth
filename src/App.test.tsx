@@ -10,7 +10,7 @@ describe('<App>', () => {
     render(
       <MemoryRouter initialEntries={['/material-ui-auth']}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/material-ui-auth" element={<HomePage />} />
         </Routes>
       </MemoryRouter>
     );
@@ -23,7 +23,7 @@ describe('<App>', () => {
     render(
       <MemoryRouter initialEntries={['/material-ui-auth/auth']}>
         <Routes>
-          <Route path="/auth" element={<AuthPage />} />
+          <Route path="/material-ui-auth/auth" element={<AuthPage />} />
         </Routes>
       </MemoryRouter>
     );
@@ -35,7 +35,7 @@ describe('<App>', () => {
   it('renders <ProfilePage> if path === "/profile and User', () => {
     render(
       <AuthContext.Provider value={{ user: { uid: 'random' } }}>
-        <MemoryRouter initialEntries={['/profile']}>
+        <MemoryRouter initialEntries={['/material-ui-auth/profile']}>
           <Routes>
             <Route path="/material-ui-auth/auth" element={<AuthPage />} />
             <Route path="/material-ui-auth/profile" element={<ProfilePage />} />
