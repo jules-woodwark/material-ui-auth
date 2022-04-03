@@ -8,7 +8,7 @@ import ProfilePage from './pages/ProfilePage';
 describe('<App>', () => {
   it('renders <HomePage> when path === "/"', () => {
     render(
-      <MemoryRouter initialEntries={['/']}>
+      <MemoryRouter initialEntries={['/material-ui-auth']}>
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
@@ -21,7 +21,7 @@ describe('<App>', () => {
 
   it('renders <AuthPage> when path === "/auth"', () => {
     render(
-      <MemoryRouter initialEntries={['/auth']}>
+      <MemoryRouter initialEntries={['/material-ui-auth/auth']}>
         <Routes>
           <Route path="/auth" element={<AuthPage />} />
         </Routes>
@@ -37,8 +37,8 @@ describe('<App>', () => {
       <AuthContext.Provider value={{ user: { uid: 'random' } }}>
         <MemoryRouter initialEntries={['/profile']}>
           <Routes>
-            <Route path="/auth" element={<AuthPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/material-ui-auth/auth" element={<AuthPage />} />
+            <Route path="/material-ui-auth/profile" element={<ProfilePage />} />
           </Routes>
         </MemoryRouter>
       </AuthContext.Provider>

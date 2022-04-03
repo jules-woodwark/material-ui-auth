@@ -21,7 +21,7 @@ const App = () => {
       <CssBaseline />
       <Layout>
         <Routes>
-          <Route path="/material-ui-auth/" element={<HomePage />} />
+          <Route path="/material-ui-auth" element={<HomePage />} />
           <Route
             path="/material-ui-auth/auth"
             element={
@@ -34,11 +34,18 @@ const App = () => {
             path="/material-ui-auth/profile"
             element={
               <Suspense fallback={<CircularProgress />}>
-                {isLoggedIn ? <ProfilePage /> : <Navigate to="/auth" replace />}
+                {isLoggedIn ? (
+                  <ProfilePage />
+                ) : (
+                  <Navigate to="/material-ui-auth/auth" replace />
+                )}
               </Suspense>
             }
           />
-          <Route path="*" element={<Navigate to="/material-ui-auth/" replace />} />
+          <Route
+            path="*"
+            element={<Navigate to="/material-ui-auth" replace />}
+          />
         </Routes>
       </Layout>
     </ThemeProvider>

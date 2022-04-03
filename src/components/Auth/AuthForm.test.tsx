@@ -6,7 +6,7 @@ import AuthForm from './AuthForm';
 describe('<AuthForm>', () => {
   it('renders login form by default', () => {
     render(
-      <MemoryRouter initialEntries={['/auth']}>
+      <MemoryRouter initialEntries={['/material-ui-auth/auth']}>
         <AuthForm />
       </MemoryRouter>
     );
@@ -28,7 +28,7 @@ describe('<AuthForm>', () => {
     const user = userEvent.setup();
 
     render(
-      <MemoryRouter initialEntries={['/auth']}>
+      <MemoryRouter initialEntries={['/material-ui-auth/auth']}>
         <AuthForm />
       </MemoryRouter>
     );

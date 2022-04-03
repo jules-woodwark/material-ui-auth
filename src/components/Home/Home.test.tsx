@@ -10,10 +10,10 @@ describe('<Home>', () => {
     const user = userEvent.setup();
 
     render(
-      <MemoryRouter initialEntries={['/']}>
+      <MemoryRouter initialEntries={['/material-ui-auth']}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/auth" element={<AuthForm />} />
+          <Route path="/material-ui-auth" element={<Home />} />
+          <Route path="/material-ui-auth/auth" element={<AuthForm />} />
         </Routes>
       </MemoryRouter>
     );
