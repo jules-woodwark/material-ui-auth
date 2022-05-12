@@ -42,5 +42,5 @@ Test the application:
 ## Further Development
 
 - Add more unit tests
-- Reset password functionality
+- Reset password via email functionality
 - Add more authentication options
