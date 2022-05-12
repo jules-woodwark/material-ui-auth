@@ -86,64 +86,62 @@ const AuthForm = () => {
   );
 
   return (
-    <Fragment>
-      <Card component="section">
-        <Form onSubmit={handleSubmit}>
-          <Icon
-            component={isLogin ? LockOpenIcon : AccountCircle}
-            fontSize="large"
-          />
-          {!isLogin && createAccountFields}
-          <StyledTextField
-            id="email"
-            name="email"
-            type="email"
-            label="Email"
-            value={values.email}
-            onBlur={handleBlur}
-            onChange={handleChange}
-            error={touched.email && Boolean(errors.email)}
-            helperText={touched.email && errors.email}
-            size={largeDevice ? 'medium' : 'small'}
-            fullWidth
-          />
-          <StyledTextField
-            id="password"
-            name="password"
-            type="password"
-            label="Password"
-            value={values.password}
-            onBlur={handleBlur}
-            onChange={handleChange}
-            error={touched.password && Boolean(errors.password)}
-            helperText={touched.password && errors.password}
-            size={largeDevice ? 'medium' : 'small'}
-            fullWidth
-          />
-          {!isLoading && (
-            <Button
-              type="submit"
-              variant="contained"
-              size={largeDevice ? 'large' : 'medium'}
-              fullWidth
-            >
-              {isLogin ? 'Login' : 'Sign Up'}
-            </Button>
-          )}
-          {isLoading && <CircularProgress />}
-          <Divider />
+    <Card component="section">
+      <Form onSubmit={handleSubmit}>
+        <Icon
+          component={isLogin ? LockOpenIcon : AccountCircle}
+          fontSize="large"
+        />
+        {!isLogin && createAccountFields}
+        <StyledTextField
+          id="email"
+          name="email"
+          type="email"
+          label="Email"
+          value={values.email}
+          onBlur={handleBlur}
+          onChange={handleChange}
+          error={touched.email && Boolean(errors.email)}
+          helperText={touched.email && errors.email}
+          size={largeDevice ? 'medium' : 'small'}
+          fullWidth
+        />
+        <StyledTextField
+          id="password"
+          name="password"
+          type="password"
+          label="Password"
+          value={values.password}
+          onBlur={handleBlur}
+          onChange={handleChange}
+          error={touched.password && Boolean(errors.password)}
+          helperText={touched.password && errors.password}
+          size={largeDevice ? 'medium' : 'small'}
+          fullWidth
+        />
+        {!isLoading && (
           <Button
+            type="submit"
             variant="contained"
-            color="success"
             size={largeDevice ? 'large' : 'medium'}
-            onClick={toggleFormHandler}
             fullWidth
           >
-            {switchFormText}
+            {isLogin ? 'Login' : 'Sign Up'}
           </Button>
-        </Form>
-      </Card>
-    </Fragment>
+        )}
+        {isLoading && <CircularProgress />}
+        <Divider />
+        <Button
+          variant="contained"
+          color="success"
+          size={largeDevice ? 'large' : 'medium'}
+          onClick={toggleFormHandler}
+          fullWidth
+        >
+          {switchFormText}
+        </Button>
+      </Form>
+    </Card>
   );
 };
 

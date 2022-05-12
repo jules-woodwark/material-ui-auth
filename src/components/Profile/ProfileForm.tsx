@@ -119,9 +119,10 @@ const ProfileForm = () => {
     });
   };
 
-  const updatePasswordHandler = () => {
+  const updatePasswordHandler = async () => {
     setNewPassword(password).then(() => {
       setFieldValue('password', '');
+      touched.password = false;
     });
   };
 
