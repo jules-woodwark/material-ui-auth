@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import useFirebase from '../../hooks/use-firebase';
+import useFirebase from '../../hooks/useFirebase';
 
 import Button from '@mui/material/Button';
 

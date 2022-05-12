@@ -1,11 +1,14 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
+import { createPortal } from 'react-dom';
 import MuiAlert from '@mui/material/Alert';
 import MuiSnackbar from '@mui/material/Snackbar';
 import UiContext from '../../store/ui-context';
 
+const portalElement =
+  typeof document !== 'undefined' ? document.getElementById('alert') : null;
+
 const Snackbar = () => {
   const uiCtx = useContext(UiContext);
-
   const { alert, setAlert } = uiCtx;
 
   const handleClose = () => {
@@ -14,8 +17,8 @@ const Snackbar = () => {
 
   let alertReturn = null;
 
-  if (alert) {
-    alertReturn = (
+  if (alert && portalElement) {
+    alertReturn = createPortal(
       <MuiSnackbar
         open={alert.open}
         autoHideDuration={2000}
@@ -29,7 +32,8 @@ const Snackbar = () => {
         >
           {alert.message}
         </MuiAlert>
-      </MuiSnackbar>
+      </MuiSnackbar>,
+      portalElement
     );
   }
 

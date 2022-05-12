@@ -2,7 +2,7 @@ import { useState, Fragment } from 'react';
 import { useFormik } from 'formik';
 import { styled, Theme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import useFirebase from '../../hooks/use-firebase';
+import useFirebase from '../../hooks/useFirebase';
 import ValidationSchema from '../../models/validationSchema';
 
 import AccountCircle from '@mui/icons-material/AccountCircleSharp';

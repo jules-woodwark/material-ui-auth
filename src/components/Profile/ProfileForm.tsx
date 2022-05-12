@@ -4,7 +4,7 @@ import { styled, Theme } from '@mui/material/styles';
 import { UserDataObject } from '../../models/types';
 import { StyledTypographyProps } from '../../models/types';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import useFirebase from '../../hooks/use-firebase';
+import useFirebase from '../../hooks/useFirebase';
 import ValidationSchema from '../../models/validationSchema';
 
 import Button from '@mui/material/Button';

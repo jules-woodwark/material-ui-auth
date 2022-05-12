@@ -1,14 +1,13 @@
 import { useContext, lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from '@mui/material/styles';
-
+import AuthContext from './store/auth-context';
+import CircularProgress from '@mui/material/CircularProgress';
 import CssBaseline from '@mui/material/CssBaseline';
+import HomePage from './pages/HomePage';
 import Layout from './components/UI/Layout';
 import theme from './styles/theme';
-import AuthContext from './store/auth-context';
 
-import CircularProgress from '@mui/material/CircularProgress';
-import HomePage from './pages/HomePage';
 const AuthPage = lazy(() => import('./pages/AuthPage'));
 const ProfilePage = lazy(() => import('./pages/ProfilePage'));
 

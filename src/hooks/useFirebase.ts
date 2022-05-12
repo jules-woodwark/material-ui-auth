@@ -8,16 +8,15 @@ import {
 import { doc, setDoc, getDoc, updateDoc } from 'firebase/firestore';
 import { db, colRef, auth } from '../firebase-config';
 import { AuthRequestFunction, EditProfileObject } from '../models/types';
-import useAlert from './use-alert';
 import AuthContext from '../store/auth-context';
+import UiContext from '../store/ui-context';
 import ValidationSchema from '../models/validationSchema';
 
 const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const authCtx = useContext(AuthContext);
-  const { showAlert } = useAlert();
-
+  const { showAlert } = useContext(UiContext);
   const { updateAccountSchema, updatePasswordSchema } = ValidationSchema;
 
   const authRequest: AuthRequestFunction = async (isLogin, values) => {
