@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/material-ui-auth/static/js/main.4db14438.js",
+    "main.js": "/material-ui-auth/static/js/main.7cb4fac4.js",
     "static/js/98.8b47364e.chunk.js": "/material-ui-auth/static/js/98.8b47364e.chunk.js",
     "static/js/887.faccbcfd.chunk.js": "/material-ui-auth/static/js/887.faccbcfd.chunk.js",
     "static/js/756.8433fe27.chunk.js": "/material-ui-auth/static/js/756.8433fe27.chunk.js",
     "index.html": "/material-ui-auth/index.html",
-    "main.4db14438.js.map": "/material-ui-auth/static/js/main.4db14438.js.map",
+    "main.7cb4fac4.js.map": "/material-ui-auth/static/js/main.7cb4fac4.js.map",
     "98.8b47364e.chunk.js.map": "/material-ui-auth/static/js/98.8b47364e.chunk.js.map",
     "887.faccbcfd.chunk.js.map": "/material-ui-auth/static/js/887.faccbcfd.chunk.js.map",
     "756.8433fe27.chunk.js.map": "/material-ui-auth/static/js/756.8433fe27.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.4db14438.js"
+    "static/js/main.7cb4fac4.js"
   ]
 }
