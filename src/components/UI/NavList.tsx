@@ -29,13 +29,13 @@ const NavList = () => {
   let navLinks;
 
   if (!isLoggedIn) {
-    navLinks = <NavListItem text="Login" path="/material-ui-auth/auth" />;
+    navLinks = <NavListItem text="Login" path="/auth" />;
   }
 
   if (isLoggedIn) {
     navLinks = (
       <React.Fragment>
-        <NavListItem text="Profile" path="/material-ui-auth/profile" />
+        <NavListItem text="Profile" path="/profile" />
         <LogoutButton />
       </React.Fragment>
     );

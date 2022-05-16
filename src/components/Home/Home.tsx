@@ -21,7 +21,7 @@ const Home = () => {
   const hidden = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
 
   const signupHandler = () => {
-    navigate('/material-ui-auth/auth');
+    navigate('/auth');
   };
 
   return (
@@ -35,7 +35,7 @@ const Home = () => {
         <StyledTypography variant="subtitle1" align="left">
           Hi, welcome to Material UI Auth, a simple React application built with
           Create React App and Material UI. This application has a protected
-          route, "/material-ui-auth/profile", which can only be accessed when a user is
+          route, "/profile", which can only be accessed when a user is
           validated.
         </StyledTypography>
         <StyledTypography variant="subtitle1" align="left">
