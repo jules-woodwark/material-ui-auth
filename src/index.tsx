@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { AuthContextProvider } from './store/auth-context';
 import { UiContextProvider } from './store/ui-context';
 
@@ -12,9 +12,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <AuthContextProvider>
     <UiContextProvider>
-      <BrowserRouter>
+      <HashRouter>
         <App />
-      </BrowserRouter>
+      </HashRouter>
     </UiContextProvider>
   </AuthContextProvider>
 );
